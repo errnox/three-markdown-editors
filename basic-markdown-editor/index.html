@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/stylesheets/app.css" type="text/css" />
+    <meta charset="utf-8"/>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="panel-body"></div>
+        <div class="col col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <center><strong>Markdown Viewer</strong></center>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+		  <center><span>Paste some Markdown:</span></center><br/>
+                  <textarea id="markdownInput" rows="5" class="form-control u-monospace"></textarea>
+                </div>
+                <div class="form-group text-center">
+                  <button type="button" class="btn btn-default" id="renderButton">Render</button>
+                </div>
+              </form>
+            </div>
+          </div>
+	  <h1 class="text-center text-muted">↓</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="panel-body"></div>
+        <div class="col col-md-8 col-md-offset-2">
+          <div id="renderedContent" class="renderedContent">
+            <div class="well">
+              <div class="text-center">
+                <em class="text-muted">Rendered Markdown</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/marked.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/app.js"></script>
+  </body>
+</html>

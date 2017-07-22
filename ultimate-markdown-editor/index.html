@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/stylesheets/app.css" type="text/css" />
+    <meta charset="utf-8"/>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+	      <strong>Markdown</strong>
+
+              <span class="text-muted">&nbsp;</span>
+	      <em id="js-savingIndicator" class="text-muted"></em>
+
+              <div class="pull-right">
+                <div class="btn-group">
+                  <button type="button" id="js-undoButton" class="btn btn-xs btn-default">Undo</button>
+                  <button type="button" id="js-redoButton" class="btn btn-xs btn-default">Redo</button>
+                  <button type="button" class="btn btn-xs btn-default js-replaceFormToggle">Replace</button>
+                </div>
+
+		<span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<label>
+		  <input type="checkbox" id="js-autosaveButton"/>
+		  Autosave
+		</label>
+		<span class="text-muted">&nbsp;</span>
+		<button type="button" id="js-deleteDocumentButton" class="btn btn-xs btn-default">Delete</button>
+
+                <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <select id="js-keybindingsSelect" class="selectXS">
+                  <option value="ace" selected="">Default</option>
+                  <option value="vim" >Vim</option>
+                  <option value="emacs" >Emacs</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="panel-body u-overflowY u-noPadding">
+
+              <div id="js-replaceForm" class="well-sm bg-info text-center hidden">
+		<div class="form-inline">
+                  <div class="form-group">
+                    <input type="text" id="js-replaceFrom" class="form-control" placeholder="Replace this..." />
+                    <input type="text" id="js-replaceTo" class="form-control" placeholder="...with this!" />
+                    <button type="button" id="js-replaceButton" class="btn btn-sm btn-primary">Replace</button>
+                    <button type="button" class="btn btn-link js-replaceFormToggle"><span class="text-info">Cancel</span></button>
+                  </div>
+		</div>
+
+		<div class="form-inline">
+                  <div class="form-group">
+                    <label>
+                      <input type="checkbox" id="js-replaceCase" checked="true"/>
+                      <small>Case-sensitive</small>
+                    </label>
+                    <label>
+                      <input type="checkbox" id="js-replaceRegExp" checked="true"/>
+                      <small>RegEx</small>
+                    </label>
+                  </div>
+		</div>
+
+		<div class="panel-body"></div>
+		<small><strong>Tip: </strong>Hit ''Meta + r'' while the editor has focus to replace things faster.</small>
+	      </div>
+
+	      <div id="markdownInput" class="u-fullHeight textareaFullHeight">
+&lt;div class="jumbotron"&gt;
+
+## Hey there!
+
+--------
+
+Type some **Markdown** and see it turn into **HTML**.
+
+--------
+
+&lt;button type="button" class="btn btn-lg btn-primary js-welcomeButton"&gt;Got it!&lt;/button&gt;
+</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col col-md-6">
+
+          <div class="row">
+            <div class="col col-md-12">
+              <div class="pull-right">
+		<label>
+                  <input type="checkbox" id="js-isFollowingButton"/>
+                  Follow
+		</label>
+		<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+		<button type="button" id="renderButton" class="btn btn-xs btn-secondary">Refresh</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-md-12">
+              <div id="renderedContent" class="renderedContent u-fullHeight u-overflowY">
+		<div class="panel-body"></div>
+		<div class="panel-body"></div>
+		<div class="well">
+		  <div class="text-center">
+                    <em class="text-muted">Type some markdown!</em>
+		  </div>
+		</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascripts/ace.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ace-mode-markdown.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ace-keybinding-emacs.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ace-keybinding-vim.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/marked.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/app.js"></script>
+  </body>
+</html>

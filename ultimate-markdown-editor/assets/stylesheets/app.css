@@ -1,0 +1,62 @@
+.renderedContent {
+  font-size: 16px;
+}
+
+code {
+  background-color: #EDEDED;
+  color: #333333;
+}
+
+.u-monospace {
+  font-family: Monospace;
+}
+
+.u-fullHeight {
+  height: 100%;
+}
+
+.u-overflowY {
+  overflow-y: auto;
+}
+
+.textareaFullHeight {
+  /* height: 100%; */
+  border-radius: 0;
+  border: 0;
+}
+
+.textareaFullHeight:active,
+.textareaFullHeight:focus {
+  box-shadow: none;
+}
+
+.u-noPadding {
+  padding: 0;
+}
+
+.form-control {
+  background-color: #FEFEFE;
+  border: 3px solid #A0A0A0;
+  font-weight: bold;
+}
+
+.form-control:focus,
+.form-control:active {
+  border-color: #337AB7;
+  box-shadow: 0 0 0 2px #99DFFD;
+  background-color: #FFFFFF;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.selectXS {
+  background-color: #FEFEFE;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #CCCCCC;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 12px;
+}

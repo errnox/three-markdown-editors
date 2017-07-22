@@ -1,0 +1,12 @@
+.renderedContent {
+  font-size: 16px;
+}
+
+code {
+  background-color: #EDEDED;
+  color: #333333;
+}
+
+.u-monospace {
+  font-family: Monospace;
+}
